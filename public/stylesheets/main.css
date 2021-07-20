@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(206, 189, 165);
+}
+.card-body {
+    padding: 0;
+}
+.card-body .caption-full{
+    padding: 9px;
+}
+.delete-form{
+    display: inline;
+}

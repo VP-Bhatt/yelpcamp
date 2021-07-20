@@ -1,0 +1,25 @@
+this version 1 of yelpcamp app. And I'm gonna learn how to make an working web app. 
+Let's
+      GET 
+           ENERGIZED 
+                      AND 
+                          START 
+                                LEarnig
+
+REST - A MAPPING BETWEEN HTTP ROUTES AND CRUD
+CREATE- 2 ROUTES 1 TO FORM 2ND TO SUBMIT
+READ - SINGLE
+UPDATE - AGAIN 2 /NEED ID
+DESTROY-1/'NEED ID
+
+REASON OF RESTFUL ROUTE IS TO ORGANIZE CODE AND INTERACTIVE AND HAVE APATTERN
+
+#add update route
+*campground edit route : <!--/campgrounds/:id/edit -->
+*comment edit route : <!--/campgrounds/:id/comments/:comment_id/edit -->
+
+#Deleting comments
+*add destroy route 
+*add ddelete button
+Campground destroy route : /campgrounds/:id
+comment destroy route : /campgrounds/:id/comments/:comment_id
