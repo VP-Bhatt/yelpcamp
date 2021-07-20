@@ -18,12 +18,16 @@ var commentRoutes  = require("./routes/comment"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb+srv://melingody:ved@yelpcamp.e3ftk.mongodb.net/yelpcamp?retryWrites=true&w=majority", { useNewUrlParser: true },{ useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://melingody:ved@yelpcamp.e3ftk.mongodb.net/yelpcamp?retryWrites=true&w=majority", { useNewUrlParser: true , useUnifiedTopology: true });
 
 // mongodb://localhost/yelp_camp_v9
 //mongodb+srv://melingody:Ved@12345#@yelpcamp.e3ftk.mongodb.net/yelpcamp?retryWrites=true&w=majority
 
-
+process.on('unhandledRejection', (reason, promise) => {
+    // do something
+    console.log(reason);
+    console.log(promise);
+  });
 // app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.urlencoded({ extended: true }))
 app.set("view engine", "ejs")
