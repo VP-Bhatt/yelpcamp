@@ -18,7 +18,43 @@ var commentRoutes  = require("./routes/comment"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb+srv://melingody:ved@yelpcamp.e3ftk.mongodb.net/yelpcamp?retryWrites=true&w=majority", { useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex: true, useFindAndModify:false}).catch(error => handleError(error));
+    // const start = async () => {
+    
+    //     if (process.env.DB_URI == null) {
+    //         throw new Error('auth DB_URI must be defined');
+    //     }
+    //     try {
+    //         await mongoose.connect(process.env.DB_URI, {
+    //             useNewUrlParser: true,
+    //             useUnifiedTopology: true,
+    //             useCreateIndex: true,
+    //         });
+    //         console.log('Server connected to MongoDb!');
+    //     } catch (err) {
+    //         throw new DbConnectionError();
+    //         console.error(err);
+    //     }
+    
+    //     const PORT = process.env.SERVER_PORT;
+    //     app.listen(PORT, () => {
+    //         console.log(`Server is listening on ${PORT}!!!!!!!!!`);
+    //     });
+    // };
+    
+    // start();
+
+mongoose.connect(
+    "mongodb://localhost/yelp_camp_v9",
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    function (err, res) {
+        try {
+            console.log('Connected to Database');
+        } catch (err) {
+            throw err;
+        }
+    });
+
+// mongodb+srv://melingody:ved@yelpcamp.e3ftk.mongodb.net/yelpcamp?retryWrites=true&w=majority
 
 // mongodb://localhost/yelp_camp_v9
 //mongodb+srv://melingody:Ved@12345#@yelpcamp.e3ftk.mongodb.net/yelpcamp?retryWrites=true&w=majority
